@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f8fb">
+    <title>LPX — answers from the web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="LPX home">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span>LPX</span>
+      </a>
+      <div class="topbar-actions">
+        <button id="new-chat" class="ghost-button" type="button" title="Start a new conversation">＋ New chat</button>
+        <div class="topbar-note"><span class="status-dot" id="status-dot"></span><span id="status-text">Checking local AI…</span></div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="eyebrow"><span class="sparkle">✦</span> CURIOUS? START HERE.</div>
+        <h1 id="hero-title">Good questions deserve<br><span>great answers.</span></h1>
+        <p class="hero-copy">Ask anything. Answers come from free web search, your local AI model, or your own PDFs — with sources you can check.</p>
+
+        <form id="search-form" class="search-form">
+          <label class="sr-only" for="question">What would you like to know?</label>
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="question" name="question" type="search" maxlength="2000" autocomplete="off"
+            placeholder="What would you like to know?" required>
+          <button id="search-button" type="submit"><span>Ask</span><span aria-hidden="true">↗</span></button>
+        </form>
+        <div class="try-prompts">
+          <span class="try-label">TRY ASKING</span>
+          <button class="prompt-chip" type="button">How do solar panels work?</button>
+          <button class="prompt-chip" type="button">What is happening in space?</button>
+          <button class="prompt-chip" type="button">Easy weeknight dinner ideas</button>
+        </div>
+        <div class="upload-row">
+          <label class="upload-chip" for="pdf-input" title="Attach a PDF to ground answers in it">📎 Upload PDF
+            <input id="pdf-input" type="file" accept="application/pdf" hidden>
+          </label>
+          <label class="toggle"><input id="use-web" type="checkbox" checked> Web search</label>
+          <label class="toggle"><input id="use-model" type="checkbox" checked> Local AI</label>
+        </div>
+      </section>
+
+      <section id="conversation" class="conversation" aria-live="polite" aria-busy="false"></section>
+
+      <div id="dock-spacer" hidden></div>
+      <footer class="footer"><span>Answers made clearer.</span><span>Always explore the sources.</span></footer>
+    </main>
+
+    <!-- chat dock (appears after the first message) -->
+    <form id="chat-dock" class="chat-dock" hidden>
+      <input id="chat-input" type="search" maxlength="2000" autocomplete="off" placeholder="Ask a follow-up — I remember the conversation…">
+      <button id="chat-send" type="submit"><span>Send</span><span aria-hidden="true">↗</span></button>
+    </form>
+  </body>
+</html>

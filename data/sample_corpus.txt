@@ -1,0 +1,49 @@
+Artificial intelligence is the study of computer systems that perform tasks
+that normally require human intelligence. These tasks include learning,
+reasoning, problem solving, perception and language understanding.
+
+Machine learning is a branch of artificial intelligence. In machine learning,
+a model learns patterns from data instead of following hand written rules.
+Deep learning uses neural networks with many layers. Neural networks are
+inspired by the human brain. Each layer transforms its input and passes the
+result to the next layer.
+
+A transformer is a neural network architecture introduced in the paper
+Attention Is All You Need. A transformer uses attention to decide which parts
+of the input matter for each output token. Attention lets the model look at
+every token in a sentence at the same time. This solved the memory problem of
+older recurrent networks.
+
+GPT is a generative pre trained transformer. GPT models are trained to predict
+the next token in a sequence. This simple objective produces text that looks
+like the training data. Training uses gradient descent to reduce the loss
+between predicted tokens and real tokens.
+
+Natural language processing studies how computers understand human language.
+Tasks include translation, summarization, question answering and search.
+Search engines index documents and rank them by relevance. Modern AI search
+systems combine search results with language models to write a direct answer
+with citations.
+
+Python is a popular programming language for artificial intelligence.
+PyTorch is a free open source deep learning library for Python. Researchers
+use PyTorch to build and train neural networks. Tensors are the core data
+structure in PyTorch. Autograd records operations to compute gradients.
+
+Free and open source software gives users the right to run, study, change and
+share the code. Open weight models publish their parameters so anyone can run
+them locally. Running models locally keeps your data private and costs nothing
+after download.
+
+A local AI server runs on your own computer. Ollama is a free tool that runs
+open weight models on a laptop. It exposes a local API at localhost. No cloud
+account and no paid API key are needed.
+
+Neural networks learn in two steps. Forward pass computes predictions from
+inputs. Backward pass computes gradients of the loss with respect to the
+weights. The optimizer updates the weights to reduce the loss. Repeating this
+over many batches trains the model.
+
+Checkpoints store model weights during training. Saving checkpoints lets you
+resume training after an interruption. Text generation samples tokens one at a
+time until the model produces an end token.

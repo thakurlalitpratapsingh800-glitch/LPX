@@ -1,0 +1,1 @@
+"""LPX — a free, open-source AI search and chat platform."""
